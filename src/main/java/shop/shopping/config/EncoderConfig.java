@@ -13,7 +13,7 @@ public class EncoderConfig {
 
     // 패스워드 암호화
     @Bean
-    public BCryptPasswordEncoder encoder() {
+    public BCryptPasswordEncoder passwordEncoder() {
 
         return new BCryptPasswordEncoder();
     }

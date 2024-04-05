@@ -41,8 +41,9 @@ dependencies {
 
 	// 스프링 data jpa 관련 의존성
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.testng:testng:7.1.0'
 
-	// mariadb driver
+    // mariadb driver
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.4.1'
 

@@ -24,8 +24,8 @@ public class Board extends BaseTimeEntity {
     @Column(nullable = false)
     private String content; // 내용
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Member member;      // 작성자
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    private Member member;      // 작성자
 
 //    @OneToMany(mappedBy = "board", orphanRemoval = true)
 //    private List<Like> likes;       // 좋아요
@@ -37,7 +37,7 @@ public class Board extends BaseTimeEntity {
 //
 //    @OneToOne(fetch = FetchType.LAZY)
 //    private UploadImage uploadImage;
-
+//
 //    public void update(BoardDto dto) {
 //        this.title = dto.getTitle();
 //        this.body = dto.getBody();
@@ -50,7 +50,7 @@ public class Board extends BaseTimeEntity {
 //    public void commentChange(Integer commentCnt) {
 //        this.commentCnt = commentCnt;
 //    }
-
+//
 //    public void setUploadImage(UploadImage uploadImage) {
 //        this.uploadImage = uploadImage;
 //    }

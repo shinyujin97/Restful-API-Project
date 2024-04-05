@@ -1,8 +1,7 @@
 package shop.shopping.dto;
 
 import lombok.*;
-import org.springframework.web.multipart.MultipartFile;
-import shop.shopping.entity.UploadImage;
+import shop.shopping.entity.Board;
 
 import java.time.LocalDateTime;
 
@@ -21,10 +20,17 @@ public class BoardDto {
     private String nickname;
     private String title;
     private String content;
-    private Integer likeCnt;
-    private LocalDateTime createdAt;
-    private LocalDateTime lastModifiedAt;
-    private MultipartFile newImage;
-    private UploadImage uploadImage;
+//    private Integer likeCnt;
+//    private LocalDateTime createdAt;
+//    private LocalDateTime lastModifiedAt;
+//    private MultipartFile newImage;
+//    private UploadImage uploadImage;
 
+    @Builder
+    public Board toBoard(){
+        return Board.builder()
+                .title(title)
+                .content(content)
+                .build();
+    }
 }

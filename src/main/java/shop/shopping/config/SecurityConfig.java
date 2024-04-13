@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeHttpRequests() // HttpServletRequest를 사용하는 요청들에 대한 접근제한을 설정
                 // antMatchers = 특정 리소스에 대해서 권한 설정
                 .antMatchers("/api/v1/members/join" , "/api/v1/members/login", "/api/v1/boards/main").permitAll() // 회원가입 , 로그인 인증절차 없이 허용가능
-                .antMatchers("/**").authenticated()
+                .antMatchers("/**").hasRole("USER")
                 .and()
                 .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class);
         // + 토큰에 저장된 유저정보를 활용하여야 하기 때문에 CustomUserDetailService 클래스를 생성합니다.

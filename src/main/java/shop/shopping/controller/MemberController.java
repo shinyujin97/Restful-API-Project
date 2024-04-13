@@ -9,6 +9,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import shop.shopping.dto.MemberJoinRequestDto;
 import shop.shopping.dto.MemberLoginRequestDto;
+import shop.shopping.dto.TokenDto;
 import shop.shopping.dto.UsernameLoginResponseDto;
 import shop.shopping.service.MemberService;
 

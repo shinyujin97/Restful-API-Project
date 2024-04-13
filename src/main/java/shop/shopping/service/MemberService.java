@@ -3,6 +3,7 @@ package shop.shopping.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import shop.shopping.constant.ErrorCode;
@@ -18,6 +19,7 @@ import shop.shopping.jwt.JwtTokenProvider;
 import shop.shopping.repository.MemberRepository;
 
 import javax.transaction.Transactional;
+import java.util.Collection;
 
 @Service
 @RequiredArgsConstructor
@@ -65,7 +67,7 @@ public class MemberService {
             member.updateRefreshToken(refreshToken);
 
             // 로그인 정보를 포함한 DTO를 생성하여 반환
-            return new UsernameLoginResponseDto(member.getUsername(), jwtTokenProvider.createToken(member.getNickname()), member.getRefreshToken());
+            return new UsernameLoginResponseDto(member.getNickname(), jwtTokenProvider.createToken(member.getUsername()),member.getRefreshToken());
         }
 
    }

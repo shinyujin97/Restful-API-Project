@@ -7,7 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public class UsernameLoginResponseDto {
 
-    String username;
+    String nickname;
     private String jwtAccessToken;
     private String jwtRefreshToken;
 }

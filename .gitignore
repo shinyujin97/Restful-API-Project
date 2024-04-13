@@ -157,3 +157,7 @@ pubspec.lock
 **/GoogleService-Info.plist
 **/google-services.json
 **/ios/firebase_app_id_file.json
+
+#### 깃허브에 올라가지 않게 설정 ###
+application.datasource.properties
+application.jwt.properties
